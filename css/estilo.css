@@ -1,0 +1,345 @@
+@charset "utf-8";
+/* CSS Document */
+body, html{
+	width: 100%;
+	height: 100%;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-size:16px;
+	color: #666666;
+	margin: 0 auto;
+}
+nav{
+	width: 100%;
+	background-color: #333333;
+	height: 60px;
+}
+.container{
+	width: 1200px;
+	margin: auto;
+	height: auto;
+	position: relative;
+}
+nav span{
+	float: right;
+}
+nav span a{
+	color: #FFFFFF;
+	display: inline-block;
+	padding: 20px;
+	text-decoration: none;
+	position: relative;
+	z-index: 1;
+}
+nav img{
+	margin-top: 0.5%;
+}
+nav span a:after{
+	content: "";
+	background-color: #666666;
+	width: 100%;
+	height: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	transition: 0.5s;
+}
+nav span a:hover:after{
+	height: 105%;
+}
+header{
+	width: 100%;
+	height: 400px;
+	position: relative;
+	background: radial-gradient(#FFE 0%, #666 90%);
+}
+
+header article{
+	width: 350px;
+	background-color: #eee;
+	font-size: 19px;
+	padding: 5px 10px;
+	position: absolute;
+	top: 50px;
+}
+
+header img{
+	position: absolute;
+	left: 270px;
+	top: 20px;
+	z-index: 10;
+	
+}
+
+.color{
+	width: 320px;
+	position: absolute;
+	right: -130px;
+	background-color: #eee;
+	text-align: center;
+	font-size: 15px;
+	transform: rotate(90deg);
+	top: 180px;
+	
+}
+.azul,.rosa,.verde,.ciano,.cinza{
+	width: 15px;
+	height: 40px;
+	position: absolute;
+	right: 59px;
+	cursor: pointer;
+	transition: .3s;
+}
+.azul{
+	background-color: #2300b3;
+	top: 140px;
+}
+.rosa{
+	background-color: #b5015a;
+	top: 185px;
+}
+.verde{
+	background-color: #13B500;
+	top: 230px;
+}
+
+.ciano{
+	background-color: #00A8BD;
+	top: 275px;
+}
+.cinza{
+	background-color: #575757;
+	top: 320px;
+}
+
+.azul:hover,.rosa:hover,.verde:hover,.ciano:hover,.cinza:hover{
+	width: 40px;
+}
+
+.azul:hover~.tenis{
+	filter: hue-rotate(145deg)brightness(0.5);
+	
+}
+.rosa:hover~.tenis{
+	filter: hue-rotate(-110deg)brightness(0.8);
+	
+}
+.verde:hover~.tenis{
+	filter: hue-rotate(30deg);
+	
+}
+
+.ciano:hover~.tenis{
+	filter: hue-rotate(110deg);
+	
+}
+.cinza:hover~.tenis{
+	filter: grayscale(1);
+	
+}
+.galeria{
+	width: 100%;
+	background-color: #333;
+	height: 235px;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+
+.imagegaleria{
+	float: left;
+	border: 5px solid #ffffff;
+	width: 270px;
+	height: 195px;
+	overflow: hidden; /*tudo que esta fora da area da imagem fica oculto*/
+	position: relative;
+	margin-right: 20px;
+}
+.imagegaleria img{
+	width: 270px;
+	cursor: pointer;
+	transition: 1s;
+	
+}
+.imagegaleria:hover img{
+	transform: scale(1.2);
+	opacity: .3;
+}
+.textogaleria{
+	position: absolute;
+	color: #333;
+	width: 100%;
+	text-align: center;
+	top: 34%;
+	font-size: 22px;
+	font-weight: bold;
+	z-index: 3;
+	cursor: pointer;
+	opacity: 0;
+	transition: 1s;
+}
+.retanguloesquerda,.retangulodireita{
+	background-color: #fff;
+	opacity: .45;
+	position: absolute;
+	top: 40%;
+	width: 100%;
+	height: 40px;
+	transition: 1s;
+	cursor: pointer;
+	
+}
+.retanguloesquerda{
+	left: -100%;
+}
+
+.retangulodireita{	
+right: -100%;
+}
+.imagegaleria:hover .retanguloesquerda{
+	left: 0;
+	opacity: .8;
+}
+.imagegaleria:hover .retangulodireita{
+	right: 0;
+	opacity: .8;
+}
+.imagegaleria:hover .textogaleria{
+	opacity: 1;
+	transition-delay: .5s;
+}
+
+.loja{
+	width: 100%;
+	margin: 0 auto;
+	height: 410px;
+	position: relative;
+	
+	
+}
+.textoloja{
+	width: 200px;
+	float: left;
+	
+}
+.textoloja1{
+	font-size: 18px;
+	font-weight: bold;
+	padding-left: 10px;
+	margin-bottom: 5px;
+	
+}
+.textoloja2{
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	margin-top: 5px;
+}
+
+.produtos{
+	width: 200px;
+	float: left;
+	text-align: center;
+	height: 155px;
+	overflow: hidden;
+	cursor: pointer;
+	transition: .7s;	
+	
+}
+
+.produtos:hover{
+	height: 410px;
+}
+.tituloprodutos{
+	background-color: #333;
+	color: #fff;
+	padding: 5px;
+	margin: auto;
+	margin-top: 10px;
+	width: 90%;
+}
+.slogan{
+	width: 100%;
+	text-align: center;
+	font-size: 50px;
+	position: absolute;
+	top: 140px;
+	transition: .6s;
+	font-family: verdana;
+	
+}
+.produtos:hover ~.slogan{
+	opacity: 0;
+	z-index: -1;
+}
+footer{
+	width: 100%;
+	background-color: #333;
+	color: #fff;
+	height: 120px;
+	padding: 10px;
+	box-sizing: border-box;
+	
+	
+	
+}
+
+.footerleft,.footercenter,.footerright{
+	float: left;
+	width: 400px;
+	
+}
+.footerleft{
+	margin-left: 50px;
+}
+.footercenter{
+	text-align: center;
+	
+}
+.footercenter a{
+	color: #999;
+	font-size: 30px;
+	margin: 0 3px;
+}
+.footer:hover{
+	color: #fff;
+}
+.footerright{
+	text-align: right;
+}
+
+.rodape{
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	
+	border-top: 1px solid #fff;
+	clear: both;
+}
+
+.banner{
+	
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7);
+	position: fixed;
+	z-index: 15;
+	text-align: center;
+	box-sizing: border-box;
+	padding-top: 10%;
+	display: none;
+}
+.botao{
+	position: absolute;
+	background-color: red;
+	color: #fff;
+	padding: 5px;
+	font-size: 10px;
+	border: none;
+	border-radius: 30%;
+	right: 20%;
+	cursor: pointer;
+	z-index: 16;
+	
+	
+}
